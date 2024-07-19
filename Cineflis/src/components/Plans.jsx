@@ -32,7 +32,7 @@ const Plans = () => {
 const PlanCard = ({ plan, isSelected, onClick }) => (
   <div 
     onClick={onClick} 
-    className={`flex flex-col px-10 py-12 rounded-[20px] w-full sm:w-[48%] md:w-[31%] lg:w-[23%] xl:w-[18%] m-2 plan-card text-center border-2 cursor-pointer 
+    className={`flex flex-col px-10 py-12 rounded-[20px] w-full sm:w-[48%] md:w-[30%] lg:w-[30%] xl:w-[30%] m-2 plan-card text-center border-2 cursor-pointer 
       ${isSelected ? 'scale-[1.03] bg_popular' : ''}`}
   >
     <h5 className='flex justify-center align-middle text-white text-[18px]'>{plan.popular ? 'Most Popular' : 'Plan'}</h5>   
