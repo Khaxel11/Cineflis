@@ -15,7 +15,7 @@ const Plans = () => {
       <div className='w-full flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-[1]'>
         <h1 className={styles.heading2}>All our plans</h1>
       </div>
-      <div className='flex flex-wrap sm:justify-start justify-center feedback-container relative z-[1]'>
+      <div className='flex flex-wrap justify-center feedback-container relative z-[1] w-full'>
         {planslist.map((plan) => (
           <PlanCard 
             key={plan.id} 
@@ -29,16 +29,15 @@ const Plans = () => {
   );
 };
 
-const PlanCard = ( {plan, isSelected, onClick }) => (
+const PlanCard = ({ plan, isSelected, onClick }) => (
   <div 
-    onClick={onClick } 
-    className={`flex flex-col px-10 py-12 rounded-[20px] md:w-[400px] md:mr-5 sm:mr-5 mr-0 my-5 plan-card text-center border-2 cursor-pointer 
-      ${isSelected ? 'scale-[1.05] bg_popular' : ''}`}
+    onClick={onClick} 
+    className={`flex flex-col px-10 py-12 rounded-[20px] w-full sm:w-[48%] md:w-[31%] lg:w-[23%] xl:w-[18%] m-2 plan-card text-center border-2 cursor-pointer 
+      ${isSelected ? 'scale-[1.03] bg_popular' : ''}`}
   >
-    
     <h5 className='flex justify-center align-middle text-white text-[18px]'>{plan.popular ? 'Most Popular' : 'Plan'}</h5>   
     <h1 className="font-poppins font-semibold text-[40px] mb-5 leading-[32px] text-white my-2">{plan.title}</h1>
-    <h2 className="font-extralight text-[16px] leading-[32px] mt-5 mb-5 text-white">
+    <h2 className="font-extralight text-[16px] leading-[32px] mt-2 mb-2 text-white">
       <strong className='font-extrabold text-[50px]'>${plan.price}</strong> / month
     </h2>
     <p className="font-poppins font-normal text-[16px] leading-[24px] text-dimWhite mt-2">Quality: <strong className='font-extrabold text-white'>{plan.quality}</strong></p>
